@@ -32,11 +32,14 @@ After all this experiments, my solution is a "mutated" depth-first search algori
 
     4.4. Goto 2
 
-And with that, one can generate a maze of over 100x100 cells (I tried up to 160x111).
+And with that, one can generate a maze of over 100x100 cells (I tried up to 160x111, half of NumWorks resolution).
 
 Although I didn't find closed paths and other issues, I can't guarantee the correctness of the generated mazes.
 ### Other memory optimizations:
 Cells only have Top and Left walls. Every wall is "bit stored". Every maze row is stored in 2 integers - Top walls and Left walls - so a maze is made of 2 (one dimensional) arrays: top_wall and left_wall. There are no walls to close the right and bottom of the maze.
+
+### Objective:
+[NumWorks Maze Script](https://my.numworks.com/python/joao-caldas-lopes/maze)
 ### How to Create a Maze
 ```python
 from cheap_maze import *
